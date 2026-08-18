@@ -16,7 +16,7 @@ export function CapabilitiesSection() {
   return (
     <section className="border-t border-border/60 py-24">
       <div className="mx-auto max-w-4xl px-4 sm:px-6">
-        <SectionHeading title="What it does — and doesn't" />
+        <SectionHeading title="What it does and doesn't" />
         <p className="mx-auto mb-10 max-w-2xl text-balance text-center text-muted-foreground">
           {capabilities.intro}
         </p>

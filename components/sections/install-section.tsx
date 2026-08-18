@@ -21,7 +21,7 @@ export function InstallSection() {
 
         <div className="mt-10">
           <p className="mb-3 text-sm text-muted-foreground">
-            Then just ask, in plain language — no explicit command needed:
+            Then just ask, in plain language, no explicit command needed:
           </p>
           <div className="flex flex-col gap-2">
             {install.tryItPrompts.map((prompt) => (

@@ -1,5 +1,5 @@
 export const site = {
-  name: "test-kit",
+  name: "Test-kit",
   pluginName: "testing-suite",
   version: "2.0.0",
   license: "MIT",
@@ -10,9 +10,9 @@ export const site = {
 } as const;
 
 export const metadata = {
-  title: "test-kit — stack-aware test writing for Claude Code",
+  title: "Test-kit: stack-aware test writing for Claude Code",
   description:
-    "A Claude Code plugin that writes unit, widget, golden, and integration tests for Flutter, React, Next.js, Swift, and Node/Express — matched to your project's own conventions, with an opt-in fault-injection check that proves the tests actually catch bugs.",
+    "A Claude Code plugin that writes unit, widget, golden, and integration tests for Flutter, React, Next.js, Swift, and Node/Express, matched to your project's own conventions, with an opt-in fault-injection check that proves the tests actually catch bugs.",
 } as const;
 
 export const nav = {
@@ -26,7 +26,7 @@ export const nav = {
 } as const;
 
 export const hero = {
-  headline: "test-kit",
+  headline: "Test-kit",
   subhead: "A Claude Code plugin marketplace for stack-aware test writing.",
   supportingLine:
     "Five platform skills that detect your project's real stack, ask before assuming what to test, and write tests that match your own conventions. Flutter, React, Next.js, Swift, and Node/Express.",
