@@ -8,11 +8,11 @@ export function SkillsSection() {
   return (
     <section id="skills" className="border-t border-border/60 py-24">
       <div className="mx-auto max-w-5xl px-4 sm:px-6">
-        <SectionHeading eyebrow="Five skills" title="One skill per stack, matched by detection" />
+        <SectionHeading eyebrow="04 / skills" title="One skill per stack, matched by detection" />
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {skills.items.map((skill) => (
-            <Card key={skill.id} className="flex flex-col gap-3 bg-card/50">
+            <Card key={skill.id} className="flex flex-col gap-3 rounded-none bg-card/50">
               <CardHeader>
                 <div className="flex items-center justify-between gap-2">
                   <CardTitle className="font-mono text-base">{skill.id}</CardTitle>
@@ -29,13 +29,14 @@ export function SkillsSection() {
                   <span className="text-foreground">Fires on: </span>
                   {skill.firesOn}
                 </p>
-                <div className="flex flex-wrap gap-1.5">
+                <ul className="flex flex-col gap-1">
                   {skill.tooling.map((tool) => (
-                    <Badge key={tool} variant="outline" className="font-normal">
-                      {tool}
-                    </Badge>
+                    <li key={tool} className="flex gap-2 text-xs">
+                      <span className="text-amber-400">·</span>
+                      <span>{tool}</span>
+                    </li>
                   ))}
-                </div>
+                </ul>
                 {"note" in skill && skill.note && <p className="text-xs">{skill.note}</p>}
               </CardContent>
             </Card>
@@ -50,7 +51,7 @@ export function SkillsSection() {
               flutter-testing: unit, widget, golden &amp; integration layers
             </AccordionTrigger>
             <AccordionContent>
-              <div className="overflow-hidden rounded-lg border border-border">
+              <div className="overflow-hidden rounded-none border border-border">
                 <table className="w-full text-left text-sm">
                   <thead className="bg-muted/50 text-xs uppercase text-muted-foreground">
                     <tr>

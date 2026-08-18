@@ -6,7 +6,7 @@ export function InstallSection() {
   return (
     <section id="install" className="border-t border-border/60 py-24">
       <div className="mx-auto max-w-3xl px-4 sm:px-6">
-        <SectionHeading eyebrow="Install" title="Two commands, either way" />
+        <SectionHeading eyebrow="08 / install" title="Two commands, either way" />
 
         <div className="flex flex-col gap-6">
           <div>
@@ -27,7 +27,7 @@ export function InstallSection() {
             {install.tryItPrompts.map((prompt) => (
               <div
                 key={prompt}
-                className="rounded-lg border border-border bg-card/50 px-4 py-3 text-sm text-muted-foreground"
+                className="rounded-none border border-border bg-card/50 px-4 py-3 text-sm text-muted-foreground"
               >
                 &quot;{prompt}&quot;
               </div>

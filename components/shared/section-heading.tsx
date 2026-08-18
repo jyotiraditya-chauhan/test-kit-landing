@@ -10,8 +10,8 @@ export function SectionHeading({ eyebrow, title, className }: SectionHeadingProp
   return (
     <div className={cn("mb-10 flex flex-col items-center text-center", className)}>
       {eyebrow && (
-        <span className="mb-3 text-xs font-medium uppercase tracking-widest text-muted-foreground">
-          {eyebrow}
+        <span className="mb-3 text-xs tracking-widest text-amber-400">
+          [&nbsp;{eyebrow}&nbsp;]
         </span>
       )}
       <h2 className="text-balance text-3xl font-semibold tracking-tight sm:text-4xl">

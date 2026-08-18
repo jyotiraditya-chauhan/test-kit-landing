@@ -7,7 +7,7 @@ export function FaultInjectionSection() {
   return (
     <section className="border-t border-border/60 py-24">
       <div className="mx-auto max-w-5xl px-4 sm:px-6">
-        <SectionHeading eyebrow="The fault-injection self-check" title="Proving the test actually catches bugs" />
+        <SectionHeading eyebrow="06 / fault-injection" title="Proving the test actually catches bugs" />
 
         <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
           <FaultInjectionDemo className="lg:sticky lg:top-24" />
@@ -24,7 +24,7 @@ export function FaultInjectionSection() {
           </ol>
         </div>
 
-        <div className="mx-auto mt-12 max-w-3xl rounded-xl border border-emerald-500/20 bg-emerald-500/5 p-6">
+        <div className="mx-auto mt-12 max-w-3xl rounded-none border border-emerald-500/20 bg-emerald-500/5 p-6">
           <p className="text-sm leading-relaxed text-zinc-300">
             <InlineCodeText text={faultInjection.verifiedCallout} />
           </p>

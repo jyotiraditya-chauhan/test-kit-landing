@@ -4,6 +4,8 @@ import "./globals.css";
 import { metadata as siteMetadata } from "@/lib/content";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
+import { VerticalTag } from "@/components/shared/vertical-tag";
+import { site } from "@/lib/content";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,6 +34,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <SiteHeader />
         <main className="flex-1">{children}</main>
         <SiteFooter />
+        <VerticalTag text={`${site.license} Licensed`} />
       </body>
     </html>
   );

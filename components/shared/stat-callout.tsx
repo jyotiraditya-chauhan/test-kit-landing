@@ -15,7 +15,7 @@ export function StatCallout({ value, label, index = 0 }: StatCalloutProps) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
       transition={{ duration: 0.5, delay: index * 0.08 }}
-      className="rounded-xl border border-border bg-card/50 p-6 text-center"
+      className="rounded-none border border-border bg-card/50 p-6 text-center"
     >
       <div className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
         {value}

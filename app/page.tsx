@@ -1,4 +1,5 @@
 import { HeroSection } from "@/components/sections/hero-section";
+import { WhyTestKitSection } from "@/components/sections/why-test-kit-section";
 import { WhySection } from "@/components/sections/why-section";
 import { CapabilitiesSection } from "@/components/sections/capabilities-section";
 import { SkillsSection } from "@/components/sections/skills-section";
@@ -13,6 +14,7 @@ export default function Home() {
   return (
     <>
       <HeroSection />
+      <WhyTestKitSection />
       <WhySection />
       <CapabilitiesSection />
       <SkillsSection />

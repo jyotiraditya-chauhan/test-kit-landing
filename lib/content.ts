@@ -26,13 +26,53 @@ export const nav = {
 } as const;
 
 export const hero = {
-  headline: "Test-kit",
-  subhead: "A Claude Code plugin marketplace for stack-aware test writing.",
-  supportingLine:
-    "Five platform skills that detect your project's real stack, ask before assuming what to test, and write tests that match your own conventions. Flutter, React, Next.js, Swift, and Node/Express.",
-  badges: ["License: MIT", "Claude Code Plugin", "Version 2.0.0", "5 Skills"],
+  rows: [
+    {
+      words: [{ text: "TESTS" }],
+      aside: "A Claude Code plugin that writes tests matching your stack, then proves they catch real bugs.",
+    },
+    {
+      words: [{ text: "THAT" }, { icon: "shield" }, { text: "CATCH" }],
+      aside: "Flutter, React, Next.js, Swift, Node/Express. One skill per stack, zero guesswork.",
+    },
+    {
+      words: [{ text: "REAL" }, { icon: "bug" }, { text: "BUGS" }],
+    },
+  ],
+  ariaLabel: "Tests that catch real bugs",
+  metaLeft: "Claude Code Plugin Marketplace",
+  signature: { thin: "Testing", accent: "Kit" },
+  panelCaption:
+    "Two commands. Zero config. Every generated test is fault-injection verified before it's called done.",
   primaryCta: { label: "Get started", href: "#install" },
   secondaryCta: { label: "Star on GitHub", href: site.repoUrl },
+} as const;
+
+export const whyTestKit = {
+  eyebrow: "01 / why-test-kit",
+  title: "Built to be trusted, not just installed.",
+  items: [
+    {
+      title: "Flexible by design",
+      description:
+        "Detects Flutter, React, Next.js, Swift, or Node/Express automatically. One plugin, five stacks, zero manual config.",
+    },
+    {
+      title: "Matches your conventions",
+      description:
+        "Existing test framework, mocking library, and file naming always win over the skill's own defaults.",
+    },
+    {
+      title: "Asks before assuming",
+      description:
+        "Every request gets one message, two questions: which layer, what scope. Never inferred silently.",
+    },
+    {
+      title: "Proves it, not just claims it",
+      description:
+        "The only test-writing skill with a mandatory fault-injection self-check: break the code on purpose, confirm the test catches it, revert clean.",
+    },
+  ],
 } as const;
 
 export const why = {

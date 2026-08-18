@@ -6,7 +6,7 @@ export function WhySection() {
   return (
     <section id="why" className="border-t border-border/60 py-24">
       <div className="mx-auto max-w-4xl px-4 sm:px-6">
-        <SectionHeading eyebrow="Why this exists" title="AI-written tests fail in a specific way" />
+        <SectionHeading eyebrow="02 / why-it-matters" title="AI-written tests fail in a specific way" />
 
         <div className="space-y-5 text-base leading-relaxed text-muted-foreground sm:text-lg">
           {why.paragraphs.map((paragraph) => (

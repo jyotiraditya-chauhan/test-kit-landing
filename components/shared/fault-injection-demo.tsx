@@ -38,7 +38,7 @@ export function FaultInjectionDemo({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        "overflow-hidden rounded-xl border border-border bg-zinc-950 font-mono text-sm",
+        "overflow-hidden rounded-none border border-border bg-zinc-950 font-mono text-sm",
         className
       )}
     >
