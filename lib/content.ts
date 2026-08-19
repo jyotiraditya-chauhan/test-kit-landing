@@ -336,4 +336,9 @@ export const footer = {
     { label: "GitHub", href: site.repoUrl },
     { label: "README", href: site.repoReadmeUrl },
   ],
+  author: {
+    name: "Aditya Chauhan",
+    email: "adityachauhan0369@gmail.com",
+    linkedinUrl: "https://www.linkedin.com/in/jyotiraditya-chauhan/",
+  },
 } as const;

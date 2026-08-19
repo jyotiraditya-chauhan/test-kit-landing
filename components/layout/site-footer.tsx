@@ -32,6 +32,22 @@ export function SiteFooter() {
           <span>v{site.version}</span>
         </div>
       </div>
+
+      <div className="border-t border-border/60 px-4 py-4 text-center text-xs text-muted-foreground sm:px-6">
+        Built by{" "}
+        <a
+          href={footer.author.linkedinUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-foreground"
+        >
+          {footer.author.name}
+        </a>{" "}
+        <span aria-hidden>·</span>{" "}
+        <a href={`mailto:${footer.author.email}`} className="hover:text-foreground">
+          {footer.author.email}
+        </a>
+      </div>
     </footer>
   );
 }
