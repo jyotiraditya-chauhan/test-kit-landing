@@ -7,7 +7,9 @@ import { HowItWorksSection } from "@/components/sections/how-it-works-section";
 import { FaultInjectionSection } from "@/components/sections/fault-injection-section";
 import { WorkedExampleSection } from "@/components/sections/worked-example-section";
 import { InstallSection } from "@/components/sections/install-section";
+import { BeyondClaudeCodeSection } from "@/components/sections/beyond-claude-code-section";
 import { FaqSection } from "@/components/sections/faq-section";
+import { ContributingSection } from "@/components/sections/contributing-section";
 import { FinalCtaSection } from "@/components/sections/final-cta-section";
 
 export default function Home() {
@@ -22,7 +24,9 @@ export default function Home() {
       <FaultInjectionSection />
       <WorkedExampleSection />
       <InstallSection />
+      <BeyondClaudeCodeSection />
       <FaqSection />
+      <ContributingSection />
       <FinalCtaSection />
     </>
   );

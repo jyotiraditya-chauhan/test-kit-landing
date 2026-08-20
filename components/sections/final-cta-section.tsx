@@ -14,7 +14,7 @@ export function FinalCtaSection() {
           Install {site.name}
         </h2>
         <p className="mt-3 max-w-lg text-balance text-muted-foreground">
-          Five stack-aware skills, one marketplace, zero setup beyond a single command.
+          Six stack-aware skills, one marketplace, zero setup beyond a single command.
         </p>
 
         <div className="mt-8 flex w-full max-w-md items-center justify-between gap-3 rounded-none border border-border bg-zinc-950 px-4 py-3 font-mono text-xs text-zinc-300 sm:text-sm">

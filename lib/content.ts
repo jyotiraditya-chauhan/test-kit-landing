@@ -1,7 +1,7 @@
 export const site = {
   name: "Test-kit",
   pluginName: "testing-suite",
-  version: "2.0.0",
+  version: "2.4.0",
   license: "MIT",
   repoUrl: "https://github.com/jyotiraditya-chauhan/test-kit",
   repoReadmeUrl: "https://github.com/jyotiraditya-chauhan/test-kit#readme",
@@ -12,7 +12,7 @@ export const site = {
 export const metadata = {
   title: "Test-kit: stack-aware test writing for Claude Code",
   description:
-    "A Claude Code plugin that writes unit, widget, golden, and integration tests for Flutter, React, Next.js, Swift, and Node/Express, matched to your project's own conventions, with an opt-in fault-injection check that proves the tests actually catch bugs.",
+    "A Claude Code plugin that writes unit, widget, golden, and integration tests for Flutter, React, Next.js, React Native/Expo, Swift, and Node/Express, matched to your project's own conventions, with an opt-in fault-injection check that proves the tests actually catch bugs.",
 } as const;
 
 export const nav = {
@@ -21,6 +21,7 @@ export const nav = {
     { label: "Skills", href: "#skills" },
     { label: "How it works", href: "#how-it-works" },
     { label: "Install", href: "#install" },
+    { label: "Beyond Claude Code", href: "#beyond-claude-code" },
   ],
   installCta: { label: "Install", href: "#install" },
 } as const;
@@ -33,7 +34,7 @@ export const hero = {
     },
     {
       words: [{ text: "THAT" }, { icon: "shield" }, { text: "CATCH" }],
-      aside: "Flutter, React, Next.js, Swift, Node/Express. One skill per stack, zero guesswork.",
+      aside: "Flutter, React, Next.js, React Native/Expo, Swift, Node/Express. One skill per stack, zero guesswork.",
     },
     {
       words: [{ text: "REAL" }, { icon: "bug" }, { text: "BUGS" }],
@@ -55,7 +56,7 @@ export const whyTestKit = {
     {
       title: "Flexible by design",
       description:
-        "Detects Flutter, React, Next.js, Swift, or Node/Express automatically. One plugin, five stacks, zero manual config.",
+        "Detects Flutter, React, Next.js, React Native/Expo, Swift, or Node/Express automatically. One plugin, six stacks, zero manual config.",
     },
     {
       title: "Matches your conventions",
@@ -115,16 +116,16 @@ export const skills = {
         "flutter_test",
         "mocktail",
         "bloc_test / ProviderContainer",
-        "golden_toolkit",
+        "Alchemist",
         "integration_test / Patrol",
       ],
       badge: "Most in-depth",
-      note: "Gets the deepest coverage of the five skills. Unit, widget, golden, and integration tests are each first-class, with their own dedicated reference docs, not folded into a generic \"widget testing\" default.",
+      note: "Gets the deepest coverage of the six skills. Unit, widget, golden, and integration tests are each first-class, with their own dedicated reference docs, not folded into a generic \"widget testing\" default.",
     },
     {
       id: "react-testing",
       command: "/testing-suite:react-testing",
-      firesOn: "package.json with react + react-dom, no next",
+      firesOn: "package.json with react + react-dom, no next, no react-native",
       tooling: ["Vitest / Jest", "React Testing Library", "MSW"],
     },
     {
@@ -134,6 +135,17 @@ export const skills = {
       tooling: [
         "Vitest (Server Actions, sync components)",
         "Playwright (async Server Components, auth, checkout)",
+      ],
+    },
+    {
+      id: "react-native-testing",
+      command: "/testing-suite:react-native-testing",
+      firesOn:
+        "package.json with react-native (Expo managed, Expo bare, or plain RN CLI)",
+      tooling: [
+        "Jest (jest-expo or the react-native preset)",
+        "React Native Testing Library",
+        "Maestro or Detox for E2E",
       ],
     },
     {
@@ -173,7 +185,7 @@ export const skills = {
     {
       layer: "Golden",
       purpose: "Pixel-level visual regression for small, stable design-system components.",
-      tooling: "golden_toolkit / alchemist",
+      tooling: "Alchemist (golden_toolkit matched if already present)",
     },
     {
       layer: "Integration",
@@ -207,13 +219,13 @@ export const howItWorks = {
       n: 4,
       title: "State the plan",
       description:
-        "What's in scope, what's mocked vs real, and the specific edge cases, before any code exists.",
+        "What's in scope, what's mocked vs real, and the specific edge cases, before any code exists. For a large scope, proposes a batched plan instead of attempting everything at once.",
     },
     {
       n: 5,
       title: "Generate",
       description:
-        "AAA-structured tests, boundary-only mocking, matching the project's existing style, with minimal comments.",
+        "AAA-structured tests, boundary-only mocking, matching the project's existing style. One header comment per file stating what it covers, inline comments only when genuinely necessary. Then a free self-review: every assertion gets re-read and strengthened if it doesn't check a specific value or state.",
     },
     {
       n: 6,
@@ -225,7 +237,7 @@ export const howItWorks = {
       n: 7,
       title: "Only if asked, run and verify",
       description:
-        "Runs the tests, then runs the mandatory fault-injection self-check on business-logic tests, and reports honestly what's covered.",
+        "Runs each new test at least twice to catch non-determinism, then runs the mandatory fault-injection self-check on business-logic tests, and reports honestly what's covered.",
     },
   ],
   callout: "Step 6 is where most requests end, and that's by design.",
@@ -299,6 +311,63 @@ claude plugin install testing-suite@test-kit-marketplace`,
   ],
 } as const;
 
+export const beyondClaudeCode = {
+  eyebrow: "09 / beyond-claude-code",
+  title: "Works beyond Claude Code",
+  intro:
+    "The SKILL.md folder convention Claude Code popularized is no longer Claude-only. Codex CLI, Cursor, and opencode now read the same SKILL.md + reference/ + scripts/ shape natively, just from different discovery paths. Every skill was already written in generic imperative instructions with no Claude-specific identity language, so the same content works elsewhere too, once it's in a path that tool looks at.",
+  commands: [
+    {
+      label: "Codex CLI or opencode -- both read .agents/skills/ directly",
+      code: `git clone --depth 1 https://github.com/jyotiraditya-chauhan/test-kit /tmp/test-kit
+cp -r /tmp/test-kit/.agents/skills/. .agents/skills/
+rm -rf /tmp/test-kit`,
+    },
+    {
+      label: "Cursor -- same skills, its own discovery path",
+      code: `git clone --depth 1 https://github.com/jyotiraditya-chauhan/test-kit /tmp/test-kit
+mkdir -p .cursor/skills
+cp -r /tmp/test-kit/.agents/skills/. .cursor/skills/
+rm -rf /tmp/test-kit`,
+    },
+    {
+      label:
+        "Aider, Windsurf, Zed, Gemini CLI, Amp -- no skills system, also appends the condensed fragment to your project's instructions file",
+      code: `git clone --depth 1 https://github.com/jyotiraditya-chauhan/test-kit /tmp/test-kit
+cp -r /tmp/test-kit/.agents/skills/. .agents/skills/
+cat /tmp/test-kit/plugins/testing-suite/portable/AGENTS.md >> AGENTS.md
+rm -rf /tmp/test-kit`,
+    },
+  ],
+  caveat:
+    "One honest caveat: this was verified by content review and each tool's own published docs on the shared SKILL.md convention, not by an actual end-to-end run inside Codex, Cursor, or opencode themselves -- do a live check in whichever one you use before relying on it for anything critical.",
+} as const;
+
+export const contributing = {
+  eyebrow: "11 / contribute",
+  title: "Contributions are welcome",
+  intro:
+    "Open an issue or a pull request. A few things that would genuinely help:",
+  items: [
+    {
+      title: "A platform this plugin doesn't cover yet",
+      description:
+        "A new skill following the same seven-step structure and reference-doc layout as the existing six.",
+    },
+    {
+      title: "Guidance that's drifted from a platform's own current docs",
+      description:
+        "The same kind of thing the currency-audit passes catch, but between audits, a report or a fix is welcome any time.",
+    },
+    {
+      title: "A real check inside Codex CLI, Cursor, or opencode",
+      description:
+        "The Beyond Claude Code portability claim is verified by content review, not an actual end-to-end run in any of them. Confirming that against a live install is the single most useful thing anyone could verify right now.",
+    },
+  ],
+  ctaLabel: "Open an issue",
+} as const;
+
 export const faq = [
   {
     question: "Does it run my tests automatically?",
@@ -329,12 +398,18 @@ export const faq = [
     question: "Which skill fires if my repo has both a Flutter app and a Node backend?",
     answer: "Whichever one matches the file you're pointing at, even in the same monorepo.",
   },
+  {
+    question: "Does this work in Codex, Cursor, or opencode?",
+    answer:
+      "The skill folders use the same SKILL.md convention those tools now read natively, once you copy them into the path each one looks at. See Beyond Claude Code below for the exact commands and an honest caveat on how this was verified.",
+  },
 ] as const;
 
 export const footer = {
   links: [
     { label: "GitHub", href: site.repoUrl },
     { label: "README", href: site.repoReadmeUrl },
+    { label: "Contribute", href: `${site.repoUrl}/issues` },
   ],
   author: {
     name: "Aditya Chauhan",
